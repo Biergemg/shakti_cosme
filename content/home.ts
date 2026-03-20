@@ -25,8 +25,8 @@ export const heroContent: HeroContent = {
   secondaryCtaLabel: "Ver tratamientos",
   secondaryCtaHref: "#tratamientos",
   backgroundImage: {
-    src: "/1.png",
-    alt: "",
+    src: "/images/home/hero-treatment-session.png",
+    alt: "Sesión facial editorial en Shakti Cosmetología",
     priority: true,
     sizes: "100vw",
   },
@@ -40,8 +40,8 @@ export const introContent: IntroContent = {
       "Shakti Cosmetología es un espacio de bienestar estético integral donde faciales, corporales y masajes se viven con una experiencia clara, cuidada y profesional.",
   },
   image: {
-    src: "/images/space-editorial.png",
-    alt: "",
+    src: "/images/home/intro-wellness-space.png",
+    alt: "Cabina de bienestar de Shakti Cosmetología",
     width: 800,
     height: 600,
   },
@@ -75,8 +75,8 @@ export const benefitsContent: BenefitsContent = {
       "Shakti acompaña necesidades reales con tratamientos que ayudan, favorecen y contribuyen al bienestar de forma progresiva y personalizada.",
   },
   image: {
-    src: "/images/hero-editorial.png",
-    alt: "",
+    src: "/images/home/benefits-treatment-session.png",
+    alt: "Detalle editorial de tratamiento facial en Shakti",
     width: 800,
     height: 600,
   },

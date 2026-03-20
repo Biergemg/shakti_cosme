@@ -7,9 +7,9 @@ import { Section } from "@/components/ui/section";
 import { SectionIntro } from "@/components/ui/section-intro";
 
 const categoryImages: Partial<Record<ServiceCategory["id"], { src: string; alt: string }>> = {
-  masajes: { src: "/images/detail-treatment.png", alt: "Detalle sensorial de masaje" },
-  faciales: { src: "/3.png", alt: "Tratamiento facial editorial" },
-  corporales: { src: "/4.png", alt: "Tratamiento corporal editorial" },
+  masajes: { src: "/images/services/massage-sensory-detail.png", alt: "Detalle sensorial de masaje" },
+  faciales: { src: "/images/services/facial-treatment-session.png", alt: "Tratamiento facial editorial" },
+  corporales: { src: "/images/services/body-treatment-session.png", alt: "Tratamiento corporal editorial" },
 };
 
 export function CategoriesSection({

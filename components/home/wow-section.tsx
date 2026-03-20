@@ -8,7 +8,7 @@ export function WowSection() {
         aria-hidden="true"
         style={{
           backgroundImage:
-            "linear-gradient(180deg, rgba(20,18,17,0.58), rgba(20,18,17,0.7)), url('/6.png')",
+            "linear-gradient(180deg, rgba(20,18,17,0.58), rgba(20,18,17,0.7)), url('/images/home/emotional-care-background.png')",
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
