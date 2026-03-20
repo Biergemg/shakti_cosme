@@ -48,8 +48,8 @@ export const siteConfig = {
       "masajes en Corregidora",
       "limpieza facial profunda",
     ],
-    ogImagePath: "/opengraph-image.png",
-    twitterImagePath: "/twitter-image.png",
+    ogImagePath: "/opengraph-image.jpg",
+    twitterImagePath: "/twitter-image.jpg",
     ogImageAlt: "Shakti Cosmetología en Corregidora, Querétaro",
   },
   verification: {
