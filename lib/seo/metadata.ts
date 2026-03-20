@@ -39,9 +39,11 @@ export function buildSiteMetadata(): Metadata {
       images: [
         {
           url: socialImageUrl,
+          secureUrl: socialImageUrl,
           width: 1200,
           height: 630,
           alt: siteConfig.seo.ogImageAlt,
+          type: "image/jpeg",
         },
       ],
     },
