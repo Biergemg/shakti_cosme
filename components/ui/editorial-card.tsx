@@ -10,7 +10,7 @@ type EditorialCardProps<T extends ElementType> = {
 } & Omit<ComponentPropsWithoutRef<T>, "as" | "children" | "className">;
 
 const baseClasses =
-  "relative overflow-hidden rounded-[20px] border transition duration-300 ease-out will-change-transform hover:-translate-y-1 hover:scale-[1.01]";
+  "relative overflow-hidden rounded-[20px] border transition duration-300 ease-out will-change-transform hover:-translate-y-1";
 
 const toneClasses = {
   default:

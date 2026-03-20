@@ -51,7 +51,7 @@ export function CtaSection({
                 href={instagramUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 text-sm tracking-[0.08em] text-[var(--color-text)] hover:-translate-y-0.5 hover:text-[var(--color-brand-strong)]"
+                className="inline-flex items-center gap-2 text-sm tracking-[0.08em] text-[var(--color-text)] hover:text-[var(--color-brand-strong)]"
               >
                 Ver Instagram
                 <ArrowUpRight className="h-4 w-4 stroke-[1.6]" />
