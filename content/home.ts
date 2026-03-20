@@ -75,7 +75,7 @@ export const benefitsContent: BenefitsContent = {
       "Shakti acompaña necesidades reales con tratamientos que ayudan, favorecen y contribuyen al bienestar de forma progresiva y personalizada.",
   },
   image: {
-    src: "/5.png",
+    src: "/images/detail-treatment.png",
     alt: "",
     width: 800,
     height: 600,
