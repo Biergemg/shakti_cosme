@@ -55,7 +55,7 @@ export function Footer({
               ))}
               <p className="mt-2">{site.appointmentOnlyLabel}</p>
             </div>
-            <WhatsAppButton href={whatsappHref} label="Agendar por WhatsApp" location="footer" className="w-full justify-center sm:w-auto" />
+            <WhatsAppButton href={whatsappHref} label="Agendar por WhatsApp" location="footer" className="w-full sm:min-w-[240px] sm:w-auto" />
           </div>
         </div>
       </Shell>

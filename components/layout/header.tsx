@@ -44,7 +44,7 @@ export function Header({
               <Instagram className="h-4 w-4 stroke-[1.6]" />
               {instagramHandle}
             </a>
-            <WhatsAppButton href={whatsappHref} label="Agendar por WhatsApp" location="header" className="px-5 py-3" />
+            <WhatsAppButton href={whatsappHref} label="Agendar por WhatsApp" location="header" className="min-w-[220px] px-6" />
           </div>
         </div>
 
@@ -53,7 +53,7 @@ export function Header({
             <MapPin className="h-3.5 w-3.5 shrink-0 stroke-[1.6]" />
             <span className="truncate">{locationLabel}</span>
           </div>
-          <WhatsAppButton href={whatsappHref} label="WhatsApp" location="header" className="px-4 py-2.5 text-[0.72rem]" />
+          <WhatsAppButton href={whatsappHref} label="WhatsApp" location="header" className="min-w-[148px] px-5 text-[0.78rem]" />
         </div>
       </Shell>
     </header>

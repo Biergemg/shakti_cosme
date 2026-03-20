@@ -46,7 +46,7 @@ export function CtaSection({
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
-              <WhatsAppButton href={whatsappHref} label="Agendar por WhatsApp" location="final-cta" />
+              <WhatsAppButton href={whatsappHref} label="Agendar por WhatsApp" location="final-cta" className="w-full sm:w-auto sm:min-w-[240px]" />
               <a
                 href={instagramUrl}
                 target="_blank"

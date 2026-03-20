@@ -22,23 +22,27 @@ export function CategoriesSection({
     <Section id="tratamientos">
       <div className="flex flex-col gap-14 lg:gap-20">
         <SectionIntro {...section} />
-        <div className="grid gap-7 lg:grid-cols-3">
-          {categories.map((category, index) => {
+        <div className="grid items-start gap-7 lg:grid-cols-3">
+          {categories.map((category) => {
             const image = categoryImages[category.id];
 
             return (
-              <EditorialCard key={category.id} className={index === 1 ? "p-0 sm:p-0 lg:-translate-y-6" : "p-0 sm:p-0"}>
-                {image ? (
-                  <div className="relative h-60 overflow-hidden rounded-t-[20px]">
-                    <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 30vw, 100vw" className="editorial-image object-cover" />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(63,58,53,0.08),rgba(63,58,53,0.38))]" />
-                  </div>
-                ) : null}
+              <EditorialCard key={category.id} className="flex h-full flex-col p-0">
+                <div className="relative h-60 overflow-hidden rounded-t-[20px] bg-[linear-gradient(180deg,#f2ede6,#e8dfd3)]">
+                  {image ? (
+                    <>
+                      <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 30vw, 100vw" className="editorial-image object-cover" />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(63,58,53,0.08),rgba(63,58,53,0.38))]" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.6),transparent_35%),linear-gradient(180deg,rgba(255,255,255,0.35),rgba(232,223,211,0.72))]" />
+                  )}
+                </div>
 
-                <div className="p-7 sm:p-8">
+                <div className="flex flex-1 flex-col p-7 sm:p-8">
                   <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[var(--color-brand-strong)]">{category.accent}</p>
                   <h3 className="mt-5 font-serif-display text-[2.35rem] leading-[0.92] tracking-[-0.02em] text-[var(--color-text)]">{category.title}</h3>
-                  <p className="mt-4 text-base leading-8 text-[var(--color-text-muted)]">{category.intro}</p>
+                  <p className="mt-4 min-h-24 text-base leading-8 text-[var(--color-text-muted)]">{category.intro}</p>
                   <ul className="mt-8 space-y-4 border-t border-[var(--color-border-soft)] pt-7">
                     {category.services.map((service) => (
                       <li key={service.name} className="flex items-start justify-between gap-4">
