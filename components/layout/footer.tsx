@@ -18,7 +18,7 @@ export function Footer({
   whatsappHref: string;
 }) {
   return (
-    <footer className="border-t border-[var(--color-border-soft)] bg-[var(--color-page)] py-12">
+    <footer className="border-t border-[var(--color-border-soft)] bg-[var(--color-page)] py-14">
       <Shell>
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.9fr] lg:gap-12">
           <div>
@@ -28,7 +28,7 @@ export function Footer({
 
           <div className="space-y-4 text-sm leading-7 text-[var(--color-text-muted)]">
             <p className="text-[0.72rem] uppercase tracking-[0.24em] text-[var(--color-brand-strong)]">{content.contactHeading}</p>
-            <a href={site.phoneHref} className="flex items-center gap-2 transition hover:text-[var(--color-brand-strong)]">
+            <a href={site.phoneHref} className="flex items-center gap-2 hover:-translate-y-0.5 hover:text-[var(--color-brand-strong)]">
               <Phone className="h-4 w-4 stroke-[1.6]" />
               {site.phoneDisplay}
             </a>
@@ -36,7 +36,7 @@ export function Footer({
               href={instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 transition hover:text-[var(--color-brand-strong)]"
+              className="flex items-center gap-2 hover:-translate-y-0.5 hover:text-[var(--color-brand-strong)]"
             >
               <Instagram className="h-4 w-4 stroke-[1.6]" />
               {site.instagramHandle}

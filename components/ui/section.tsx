@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils/cn";
 import { Shell } from "@/components/ui/shell";
 
 const surfaceClasses = {
-  default: "",
-  muted: "bg-[var(--color-surface-muted)]",
-  contrast: "bg-[var(--color-surface-contrast)] text-[var(--color-surface-contrast-foreground)]",
+  default: "surface-light",
+  muted: "surface-muted",
+  contrast: "surface-contrast text-[var(--color-surface-contrast-foreground)]",
 } as const;
 
 export function Section({
@@ -23,7 +23,7 @@ export function Section({
   shellClassName?: string;
 }) {
   return (
-    <section id={id} className={cn("section-space", surfaceClasses[surface], className)}>
+    <section id={id} className={cn("section-space section-halo", surfaceClasses[surface], className)}>
       <Shell className={shellClassName}>{children}</Shell>
     </section>
   );

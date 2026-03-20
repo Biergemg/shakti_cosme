@@ -19,16 +19,16 @@ export function Header({
   whatsappHref: string;
 }) {
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border-soft)] bg-[var(--color-page)]/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[var(--color-border-soft)] bg-[var(--color-page)]/72 backdrop-blur-xl">
       <Shell>
-        <div className="flex min-h-[76px] items-center justify-between gap-6">
-          <a href="#inicio" className="min-w-0 py-2">
+        <div className="flex min-h-[80px] items-center justify-between gap-6">
+          <a href="#inicio" className="min-w-0 py-2 transition hover:opacity-90">
             <BrandLogo priority className="h-14 w-44 sm:h-16 sm:w-52 md:h-[70px] md:w-56" />
           </a>
 
           <nav className="hidden items-center gap-8 text-[0.78rem] uppercase tracking-[0.18em] text-[var(--color-text-muted)] lg:flex">
             {navigationItems.map((item) => (
-              <a key={item.href} href={item.href} className="transition hover:text-[var(--color-brand-strong)]">
+              <a key={item.href} href={item.href} className="hover:-translate-y-0.5 hover:text-[var(--color-brand-strong)]">
                 {item.label}
               </a>
             ))}
@@ -39,7 +39,7 @@ export function Header({
               href={instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] transition hover:text-[var(--color-brand-strong)]"
+              className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:-translate-y-0.5 hover:text-[var(--color-brand-strong)]"
             >
               <Instagram className="h-4 w-4 stroke-[1.6]" />
               {instagramHandle}

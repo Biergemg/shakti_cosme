@@ -15,14 +15,14 @@ const trustIcons = {
 export function TrustSection({ content }: { content: TrustContent }) {
   return (
     <Section surface="contrast">
-      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <SectionIntro {...content.section} tone="inverse" />
         <div className="grid gap-5 sm:grid-cols-2">
           {content.signals.map((signal) => {
             const Icon = trustIcons[signal.icon];
             return (
-              <EditorialCard key={signal.label} tone="contrast" className="p-6">
-                <Icon className="h-5 w-5 stroke-[1.6] text-[var(--color-brand)]" />
+              <EditorialCard key={signal.label} tone="contrast" className="p-7">
+                <Icon className="h-5 w-5 stroke-[1.6] text-white/72" />
                 <p className="mt-5 text-base leading-8 text-[var(--color-contrast-muted)]">{signal.label}</p>
               </EditorialCard>
             );

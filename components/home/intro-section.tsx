@@ -15,19 +15,19 @@ const introIcons = {
 export function IntroSection({ content }: { content: IntroContent }) {
   return (
     <Section surface="muted">
-      <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+      <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:gap-20">
         <div>
           <SectionIntro {...content.section} />
-          <div className="motion-reveal-up relative mt-8 overflow-hidden rounded-[2rem] border border-[var(--color-border-soft)] shadow-sm sm:mt-12">
+          <div className="motion-reveal-up editorial-frame relative mt-10 border border-[var(--color-border-soft)] sm:mt-14">
             <Image
               src={content.image.src}
               alt={content.image.alt}
               width={content.image.width}
               height={content.image.height}
               sizes="(min-width: 1024px) 42vw, 100vw"
-              className="aspect-[4/5] w-full object-cover transition duration-700 hover:scale-105 sm:aspect-video lg:aspect-[4/3]"
+              className="editorial-image aspect-[4/5] w-full object-cover transition duration-700 hover:scale-105 sm:aspect-video lg:aspect-[4/3]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2A2623]/30 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(48,42,38,0.08),rgba(48,42,38,0.34))]" />
           </div>
         </div>
 
@@ -35,9 +35,9 @@ export function IntroSection({ content }: { content: IntroContent }) {
           {content.points.map((point) => {
             const Icon = introIcons[point.icon];
             return (
-              <EditorialCard key={point.title} className="p-7 sm:p-8">
+              <EditorialCard key={point.title} className="p-7 sm:p-8 lg:p-9">
                 <Icon className="h-5 w-5 stroke-[1.6] text-[var(--color-brand-strong)]" />
-                <h3 className="mt-6 font-serif-display text-[2rem] leading-none text-[var(--color-text)]">{point.title}</h3>
+                <h3 className="mt-6 font-serif-display text-[2.15rem] leading-[0.94] tracking-[-0.02em] text-[var(--color-text)]">{point.title}</h3>
                 <p className="mt-4 max-w-md text-base leading-8 text-[var(--color-text-muted)]">{point.description}</p>
               </EditorialCard>
             );

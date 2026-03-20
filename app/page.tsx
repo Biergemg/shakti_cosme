@@ -28,6 +28,7 @@ import { HeroSection } from "@/components/home/hero-section";
 import { IntroSection } from "@/components/home/intro-section";
 import { ProcessSection } from "@/components/home/process-section";
 import { TrustSection } from "@/components/home/trust-section";
+import { WowSection } from "@/components/home/wow-section";
 import { FaqStructuredData } from "@/components/seo/faq-structured-data";
 import { StructuredData } from "@/components/seo/structured-data";
 
@@ -58,6 +59,7 @@ export default function HomePage() {
         <BenefitsSection content={benefitsContent} />
         <ProcessSection content={processContent} />
         <TrustSection content={trustContent} />
+        <WowSection />
         <CtaSection content={ctaContent} site={siteConfig} instagramUrl={siteLinks.instagram} whatsappHref={siteLinks.whatsapp} />
         <FaqSection section={faqSectionContent} items={faqItems} />
       </main>

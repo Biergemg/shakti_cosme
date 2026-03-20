@@ -17,16 +17,26 @@ export function FeaturedServicesSection({
   whatsappHref: string;
 }) {
   return (
-    <Section surface="contrast">
-      <div className="flex flex-col gap-12 lg:gap-16">
+    <Section surface="contrast" className="relative overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.22]"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "linear-gradient(180deg, rgba(18,16,15,0.42), rgba(18,16,15,0.78)), url('/3.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      <div className="relative flex flex-col gap-14 lg:gap-20">
         <SectionIntro {...section} tone="inverse" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <EditorialCard key={service.name} tone="contrast" className="p-7">
+            <EditorialCard key={service.name} tone="contrast" className="p-7 lg:p-8">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-[0.72rem] uppercase tracking-[0.24em] text-[var(--color-brand)]">{service.category}</p>
-                  <h3 className="mt-4 font-serif-display text-[2rem] leading-none text-[var(--color-surface-contrast-foreground)]">{service.name}</h3>
+                  <p className="text-[0.72rem] uppercase tracking-[0.24em] text-white/62">{service.category}</p>
+                  <h3 className="mt-4 font-serif-display text-[2.05rem] leading-[0.94] tracking-[-0.02em] text-[var(--color-surface-contrast-foreground)]">{service.name}</h3>
                 </div>
                 <span className="text-sm tracking-[0.16em] text-[var(--color-contrast-muted)]">{formatPrice(service.price)}</span>
               </div>
