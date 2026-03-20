@@ -1,6 +1,6 @@
 import { buildWhatsAppUrl } from "@/lib/contact/whatsapp";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://shakti-cosmetologia.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://shakti-cosme.vercel.app";
 const googleVerificationCode =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() || "REEMPLAZAR_VERIFICATION_CODE";
 

@@ -7,6 +7,11 @@ export function getCanonicalUrl(path = "/") {
 }
 
 export function buildSiteMetadata(): Metadata {
+  const socialTitle = "Shakti Cosmetología";
+  const socialDescription = "Faciales, corporales y masajes boutique en Corregidora, Querétaro. Atención personalizada con cita previa.";
+  const socialImageUrl = getCanonicalUrl(siteConfig.seo.ogImagePath);
+  const twitterImageUrl = getCanonicalUrl(siteConfig.seo.twitterImagePath);
+
   return {
     metadataBase: new URL(siteConfig.url),
     title: siteConfig.seo.title,
@@ -16,16 +21,24 @@ export function buildSiteMetadata(): Metadata {
     alternates: {
       canonical: "/",
     },
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      ],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+      shortcut: ["/favicon.ico"],
+    },
     openGraph: {
-      title: siteConfig.seo.title,
-      description: siteConfig.seo.description,
+      title: socialTitle,
+      description: socialDescription,
       url: siteConfig.url,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type: "website",
       images: [
         {
-          url: siteConfig.seo.ogImagePath,
+          url: socialImageUrl,
           width: 1200,
           height: 630,
           alt: siteConfig.seo.ogImageAlt,
@@ -34,9 +47,9 @@ export function buildSiteMetadata(): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: siteConfig.seo.title,
-      description: siteConfig.seo.description,
-      images: [siteConfig.seo.twitterImagePath],
+      title: socialTitle,
+      description: socialDescription,
+      images: [twitterImageUrl],
     },
     verification: {
       google: siteConfig.verification.google,
