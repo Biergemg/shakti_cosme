@@ -40,7 +40,7 @@ export const introContent: IntroContent = {
       "Shakti Cosmetología es un espacio de bienestar estético integral donde faciales, corporales y masajes se viven con una experiencia clara, cuidada y profesional.",
   },
   image: {
-    src: "/2.png",
+    src: "/images/space-editorial.png",
     alt: "",
     width: 800,
     height: 600,
